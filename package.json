@@ -1,14 +1,11 @@
 {
-  "homepage": "http://madylune.github.io/culture-quiz-api",
   "name": "culture-quiz-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
