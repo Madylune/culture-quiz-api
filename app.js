@@ -2,8 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const importData = require('./data.json');
+
 const indexRouter = require('./routes/index');
+const questionsRouter = require('./routes/questions');
 
 const path = require('path');
 
@@ -22,9 +23,6 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 app.use('/', indexRouter);
-
-app.get('/questions', (req, res, next) => {
-  res.send(importData);
-});
+app.use('/questions', questionsRouter);
 
 module.exports = app;
