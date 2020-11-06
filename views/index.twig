@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<header>
+    <h1>{{ title }}</h1>
+</header>
+<main>
+  <p>This is the documentation of the Culture Quiz API. This is an open source API, you don't need any access key.</p>
+  <p>This API was created to allow developers to use it for their app. It gives access to multiple choice questions in French. You can use it for create a quiz for example.</p>
+  <p>The default response format is JSON <code>application/json</code></p>
+  <h2>Available routes</h2>
+  <ul>
+    <li>
+      <code>GET /questions</code>
+      <i>=> Returns all questions</i>
+    </li>
+    <li>
+      <code>GET /questions/{questionId}</code>
+      <i>=> Returns question with matching question id</i>
+    </li>
+  </ul>
+</main>
+<script src="/javascripts/script.js"></script>
+</body>
+</html>

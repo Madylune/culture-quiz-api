@@ -3,6 +3,12 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const importData = require('./data.json');
+const indexRouter = require('./routes/index');
+
+const path = require('path');
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'twig');
 
 // CORS
 app.use((req, res, next) => {
@@ -14,6 +20,8 @@ app.use((req, res, next) => {
 
 // Change request body to json
 app.use(bodyParser.json());
+
+app.use('/', indexRouter);
 
 app.get('/questions', (req, res, next) => {
   res.send(importData);
